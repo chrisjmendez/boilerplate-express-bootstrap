@@ -1,0 +1,80 @@
+!!! 5
+//[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]
+//[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]
+//[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]
+//[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]
+  
+head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+  
+    title Title of App
+
+    meta(name="description", content="")
+    meta(name="author", content="")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+    //-Comment Out
+    //
+      link(rel="shortcut icon", href="/favicon.ico")
+      link(rel="apple-touch-icon", sizes="144x144", href="/apple-touch-icon.png")
+      link(rel="apple-touch-icon", sizes="114x114", href="/apple-touch-icon.png")
+      link(rel="apple-touch-icon", sizes="72x72", href="/apple-touch-icon.png")
+      link(rel="apple-touch-icon", href="/apple-touch-icon.png")
+    //- link(rel="stylesheet", media="handheld", href="css/handheld.css?v=2")
+    link(rel="stylesheet", href="/css/plugins/twitter/bootstrap.min.css")
+
+    style(type="text/css", media="screen")
+      body{ 
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+
+    block stylesheets
+            
+    link(rel="stylesheet", href="/css/plugins/twitter/bootstrap-responsive.min.css")
+
+    script(type="text/javascript", charset="utf-8", src='//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
+    script(type="text/javascript", charset="utf-8", src='//ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js')
+
+    //Le HTML5 shim, for IE6-8 support of HTML5 elements
+    //[if lt IE 9]>
+      script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+      <![endif]
+
+body
+  block header
+
+  div(class="navbar navbar-fixed-top")
+    div(class="navbar-inner")
+      div(class="container")
+        a(class="btn btn-navbar", data-toggle="collapse", data-target=".nav-collapse")
+          span(class="icon-bar")
+          span(class="icon-bar")
+          span(class="icon-bar")
+        a(class="brand", href="/") Verge
+        div(class="nav-collapse")
+          ul(class="nav")
+            li
+              a(href="/signup")="Sign-up!"
+            li
+              a(href="/login")="Log-in"
+            li(class="active")
+              a(href="/sessions/login")="Sessions Log-in"
+
+  
+  block content
+  
+  block footer
+    hr
+    footer
+      block javascripts
+
+    include ../includes/analytics
+      //if lt IE 7
+        script(defer, src='//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js')
+        script(defer)
+          window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})
+      //<![endif]
+
+|</html>

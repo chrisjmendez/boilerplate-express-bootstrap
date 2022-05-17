@@ -8,9 +8,6 @@
   "dependencies": {
     "express": "3.0.x",
 	"nodemon": "0.6.x",
-//	"connect": "2.4.x",
-//    "crypto": "0.0.x",
-//	"everyauth": "git://github.com/bnoguchi/everyauth.git#express3",
     "jade": "0.27.x"
   }
 }
